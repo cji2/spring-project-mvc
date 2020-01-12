@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HelloWorldController {
@@ -41,7 +42,20 @@ public class HelloWorldController {
 		return "helloworld";
 	}
 	
-	
-	
-	
+	/* new a controller method to read form data and add data to the model */
+	@RequestMapping("/processFormThree")
+	public String bindVaribleByAnnotation(@RequestParam("aName") String aName, 
+																	Model model) {
+		
+		// convert the data to all caps
+		aName = aName.toUpperCase();
+		
+		// create the message.
+		String result = "Dear " + aName;
+		
+		// add message to the model, which is a pair of name("message") and value(result).
+		model.addAttribute("message", result);
+		
+		return "helloworld";
+	}
 }
