@@ -4,6 +4,8 @@
 	<hr>
 	<a href="hello/showForm">Hello World Form</a>
 	<hr>
-	<a href="student/showForm">Student Form with Form Tags and Data Binding</a>
+	<a href="student/showForm">Student Form Page</a>
+	<hr>
+	<a href="customer/showForm">Customer Form Page</a>
 </body>
 </html>
