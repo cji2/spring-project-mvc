@@ -9,5 +9,7 @@
 </head>
 <body>
 	<h3>The customer is confirmed: ${customer.firstName} ${customer.lastName}</h3>
+	<hr/>
+	<h3>Course Code: ${customer.courseCode}</h3>
 </body>
 </html>
